@@ -1,0 +1,36 @@
+[submodule "NERDTree"]
+	path = NERDTree
+	url = ./.vim/bundle/nerdtree
+[submodule "Tagbar"]
+	path = Tagbar
+	url = ./.vim/bundle/tagbar/
+[submodule "vim-bundler"]
+	path = vim-bundler
+	url = ./.vim/bundle/vim-bundler/
+[submodule "vim-handlebars"]
+	path = vim-handlebars
+	url = ./.vim/bundle/vim-handlebars/
+[submodule "vim-rails"]
+	path = vim-rails
+	url = ./.vim/bundle/vim-rails
+[submodule "vim-ruby"]
+	path = vim-ruby
+	url = ./.vim/bundle/vim-ruby
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule ".vim/bundle/vim-bundler"]
+	path = .vim/bundle/vim-bundler
+	url = git@github.com:tpope/vim-bundler.git
+[submodule ".vim/bundle/vim-handlebars"]
+	path = .vim/bundle/vim-handlebars
+	url = git@github.com:nono/vim-handlebars.git
+[submodule ".vim/bundle/vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule ".vim/bundle/vim-rails"]
+	path = .vim/bundle/vim-rails
+	url = git@github.com:tpope/vim-rails.git

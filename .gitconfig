@@ -1,0 +1,11 @@
+[user]
+	name = Doug Miller
+	email = dmiller@iseatz.com
+[push]
+	default = upstream
+[alias]
+	co = checkout
+	ci = commit
+	rb = rebase
+[core]
+	excludesfile = ~/.gitignore
