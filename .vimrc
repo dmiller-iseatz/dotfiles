@@ -59,3 +59,13 @@ function! LoadSession(session_name)
     echo "No session loaded."
   endif
 endfunction
+
+let g:tagbar_type_javascript = {
+    \ 'ctagstype' : 'JavaScript',
+    \ 'kinds'     : [
+        \ 'o:objects',
+        \ 'f:functions',
+        \ 'a:arrays',
+        \ 's:strings'
+    \ ]
+\ }
