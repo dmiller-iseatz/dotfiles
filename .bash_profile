@@ -3,6 +3,12 @@ eval "$(rbenv init -)"
 
 # DEVIN'S PERSONAL AWESOMEPROMPT(tm) with DOUG'S AWESOMEREADIBILITY(tm)
 
+# Outputs the current branch if in a git repository
+source ~/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWCOLORHINTS=true
+GIT_PS1_UNTRACKEDFILES=true
+
 function get_color {
      echo $ResetColor"\[\e["$1"\]"
 }
@@ -23,16 +29,15 @@ Frame_Color=$(get_color "0;34m")
 User_Color=$(get_color "0;33m")
 At_Color=$(get_color "1;30m")
 Host_Color=$(get_color "0;33m")
-Time_Color=$(get_color "1;36m")
+Git_Color=$(get_color "1;36m")
 Path_Color=$(get_color "1;33m")
 UID_Color=$(get_color "1;37m")
 
+PROMPT_COMMAND="__git_ps1 '\n\[\e[0;34m\]┌[$User_Color\u$Frame_Color]─[$Path_Color\w$Frame_Color]─[$Git_Color' '$Frame_Color]\n\[\e[0;34m\]└[$UID_Color\$$Frame_Color]› $Reset_Color' '%s'"
 
-# PS1="\n$Frame_Color┌[$User_Color\u$At_Color@$Host_Color\h$Frame_Color]─[$Path_Color\w$Frame_Color]─[$Time_Color\@$Frame_Color]\n└[$UID_Color\$$Frame_Color]› $Reset_Color"
 
-# Removed the machine's hostname because it's dumb on this computer.
 # Opening frame color variable isn't working for some reason, so it is hard coded;
-PS1="\n\[\e[0;34m\]┌[$User_Color\u$Frame_Color]─[$Path_Color\w$Frame_Color]─[$Time_Color\@$Frame_Color]\n\[\e[0;34m\]└[$UID_Color\$$Frame_Color]› $Reset_Color"
+#export PS1="\n\[\e[0;34m\]┌[$User_Color\u$Frame_Color]─[$Path_Color\w$Frame_Color]─[$Git_Color\$(__git_ps1 "%s")$Frame_Color]\n\[\e[0;34m\]└[$UID_Color\$$Frame_Color]› $Reset_Color"
 
 
 # Colorized ls
@@ -46,3 +51,9 @@ source ~/git-completion.bash
 
 # mvim alias
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+
+#mdfind wrapper
+alias sw='~/softwhere.sh'
+
+#querulous
+alias qm='~/iz/querulous/bin/qm'
