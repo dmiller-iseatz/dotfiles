@@ -60,6 +60,7 @@ function! LoadSession(session_name)
   endif
 endfunction
 
+" Modification for taglist support for javascript
 let g:tagbar_type_javascript = {
     \ 'ctagstype' : 'JavaScript',
     \ 'kinds'     : [
@@ -69,3 +70,34 @@ let g:tagbar_type_javascript = {
         \ 's:strings'
     \ ]
 \ }
+
+function! DoCleanXML()
+  " save the filetype so we can restore it later
+  let l:origft = &ft
+  set ft=
+  " delete the xml header if it exists. This will
+  " permit us to surround the document with fake tags
+  " without creating invalid xml.
+  1s/<?xml .*?>//e
+  " insert fake tags around the entire document.
+  " This will permit us to pretty-format excerpts of
+  " XML that may contain multiple top-level elements.
+  0put ='<CleanXML>'
+  $put ='</CleanXML>'
+  silent %!xmllint --format --encode utf-8 -
+  " xmllint will insert an <?xml?> header setting its
+  " encoding type to utf-8
+  " delete the fake tags
+  2d
+  $d
+  " restore the normal indentation
+  silent %<
+  " back to home
+  1
+  " restore the filetype
+  exe "set ft=" . l:origft
+endfunction
+command! CleanXML call DoCleanXML()
+
+" Custom grep command that opens results list in a new buffer
+command! -nargs=+ Gr execute 'silent grep! -RI <args>' | copen 30
