@@ -55,5 +55,3 @@ alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 #mdfind wrapper
 alias sw='~/softwhere.sh'
 
-#querulous
-alias qm='~/iz/querulous/bin/qm'
