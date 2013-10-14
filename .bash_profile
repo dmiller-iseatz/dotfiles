@@ -55,3 +55,6 @@ alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 #mdfind wrapper
 alias sw='~/softwhere.sh'
 
+#ls branch command
+source ~/.git-ls-branch.sh
+alias lsb='__git_ls_branch'
