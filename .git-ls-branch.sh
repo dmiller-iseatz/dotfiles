@@ -12,10 +12,10 @@ __git_ls_branch () {
     then
       cd $file
       ps1=`__git_ps1`
-      echo "$file $ps1"
+      printf "%15s %15s" $file $ps1
       cd ..
     else
-      echo "$file"
+      printf "%15s" $file
     fi
   done
 
