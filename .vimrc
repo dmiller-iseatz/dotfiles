@@ -31,6 +31,9 @@ augroup filetype
 	au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
 
+" Stupid jruby slowness
+let g:ruby_path='/usr/bin/ruby'
+
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
@@ -40,7 +43,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 highlight Pmenu ctermbg=238 gui=bold
 
 " Saving and restoring sessions
-function! SaveSession(session_name)
+function! DoSaveSession(session_name)
   let b:sessiondir = $HOME . "/.vim/sessions"
   if (filewritable(b:sessiondir) != 2)
     exe 'silent !mkdir -p ' b:sessiondir
@@ -49,8 +52,9 @@ function! SaveSession(session_name)
   let b:filename = b:sessiondir . '/' . a:session_name . '.vim'
   exe "mksession! " . b:filename
 endfunction
+command! SaveSession call DoSaveSession()
 
-function! LoadSession(session_name)
+function! DoLoadSession(session_name)
   let b:sessiondir = $HOME . "/.vim/sessions"
   let b:sessionfile = b:sessiondir . '/' . a:session_name . '.vim'
   if (filereadable(b:sessionfile))
@@ -59,14 +63,16 @@ function! LoadSession(session_name)
     echo "No session loaded."
   endif
 endfunction
+command! -nargs=1 LoadSession call DoLoadSession(<f-args>)
 
 " Modification for taglist support for javascript
 let g:tagbar_type_javascript = {
     \ 'ctagstype' : 'JavaScript',
     \ 'kinds'     : [
-        \ 'o:objects',
+        \ 'c:constructors',
         \ 'f:functions',
         \ 'a:arrays',
+        \ 'o:objects',
         \ 's:strings'
     \ ]
 \ }
@@ -99,5 +105,5 @@ function! DoCleanXML()
 endfunction
 command! CleanXML call DoCleanXML()
 
-" Custom grep command that opens results list in a new buffer
-command! -nargs=+ Gr execute 'silent grep! -RI <args>' | copen 30
+" Open vim-fugitive Ggrep output in a quickfix window
+autocmd QuickFixCmdPost *grep* cwindow

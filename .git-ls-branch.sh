@@ -6,16 +6,16 @@
 
 __git_ls_branch () {
 
-  for file in `ls`
+  for item in `ls`
   do
-    if [ -d $file ]
+    if [ -d $item ] && [ -d $item/.git ]
     then
-      cd $file
+      cd $item
       ps1=`__git_ps1`
-      printf "%-30s %15s\n" "$file" "$ps1"
+      printf "%-30s %15s\n" "$item" "$ps1"
       cd ..
     else
-      printf "%-30s\n" "$file"
+      printf "%-30s\n" "$item"
     fi
   done
 

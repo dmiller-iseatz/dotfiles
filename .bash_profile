@@ -1,4 +1,4 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:/usr/local/share/npm/bin:$PATH"
 eval "$(rbenv init -)"
 
 # DEVIN'S PERSONAL AWESOMEPROMPT(tm) with DOUG'S AWESOMEREADIBILITY(tm)
@@ -43,9 +43,6 @@ PROMPT_COMMAND="__git_ps1 '\n\[\e[0;34m\]┌[$User_Color\u$Frame_Color]─[$Path
 # Colorized ls
 alias ls='ls -G'
 
-# Rails aliases
-alias be='bundle exec'
-
 # git autocompletions
 source ~/git-completion.bash
 
@@ -58,3 +55,38 @@ alias sw='~/softwhere.sh'
 #ls branch command
 source ~/.git-ls-branch.sh
 alias lsb='__git_ls_branch'
+#psql -h 54.208.90.157 -U postgres simian_qa
+alias ll='ls -l'
+
+__bundle_exec_custom () {
+  if [ -f Gemfile.local ]
+  then
+    BUNDLE_GEMFILE="Gemfile.local" bundle exec $@
+  else
+    bundle exec $@
+  fi
+}
+
+__bundle_install_custom () {
+  if [ -f Gemfile.local ]
+  then
+    BUNDLE_GEMFILE="Gemfile.local" bundle install $@
+  else
+    bundle exec $@
+  fi
+}
+
+# Rails aliases
+alias be='__bundle_exec_custom'
+alias bi='__bundle_install_custom'
+alias ber='rspec -c'
+
+# torquebox
+#export TORQUEBOX_HOME=~/torquebox-3.0.2
+#export JBOSS_HOME=$TORQUEBOX_HOME/jboss
+#export JRUBY_HOME=$TORQUEBOX_HOME/jruby
+#export PATH=$JRUBY_HOME/bin:$PATH
+
+# iZ api config
+alias apilocal='qm -a reg -k api-http -v localhost:8888;qm -a unreg -k api-http -v amex-api-qa.iseatz.com:80'
+alias apiqa='qm -a unreg -k api-http -v localhost:8888;qm -a reg -k api-http -v amex-api-qa.iseatz.com:80'

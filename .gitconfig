@@ -4,8 +4,19 @@
 [push]
 	default = upstream
 [alias]
+  st = status
 	co = checkout
 	ci = commit
 	rb = rebase
 [core]
 	excludesfile = ~/.gitignore
+[color]
+	ui = true
+[color "branch"]
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
+[grep]
+  lineNumber = true
+[alias]
+  kill = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
