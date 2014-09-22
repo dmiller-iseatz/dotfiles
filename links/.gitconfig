@@ -1,0 +1,26 @@
+[user]
+	name = Doug Miller
+	email = dmiller@iseatz.com
+[push]
+	default = upstream
+[alias]
+  st = status
+	co = checkout
+	ci = commit
+	rb = rebase
+[core]
+	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
+[color]
+	ui = true
+[color "branch"]
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
+[grep]
+  lineNumber = true
+[alias]
+  kill = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

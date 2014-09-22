@@ -9,11 +9,19 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'garyharan/vim-proto'
+Plugin 'wincent/Command-T'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
+
+augroup AutoReloadVimRC
+  au!
+  " automatically reload vimrc when it's saved
+  au BufWritePost $MYVIMRC so $MYVIMRC
+augroup END
 
 set number
 set ruler

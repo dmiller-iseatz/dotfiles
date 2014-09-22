@@ -1,0 +1,8 @@
+.DS_Store
+vendor/bundle
+.*.swp
+.*.swo
+Gemfile.lock
+.ruby-version
+Gemfile.local*
+bower_components
