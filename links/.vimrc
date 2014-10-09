@@ -8,6 +8,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tommcdo/vim-fubitive'
+Plugin 'tpope/vim-git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'garyharan/vim-proto'
 Plugin 'wincent/Command-T'
