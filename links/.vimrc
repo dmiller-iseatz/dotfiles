@@ -13,6 +13,7 @@ Plugin 'tpope/vim-git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'garyharan/vim-proto'
 Plugin 'wincent/Command-T'
+Plugin 'kchmck/vim-coffee-script'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,6 +39,8 @@ set softtabstop=2
 set shiftwidth=2
 set autoindent
 set copyindent
+
+set laststatus=2
 
 set hlsearch
 set incsearch
