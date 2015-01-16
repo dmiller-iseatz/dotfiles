@@ -14,6 +14,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'garyharan/vim-proto'
 Plugin 'wincent/Command-T'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'fatih/vim-go'
+Plugin 'cstrahan/vim-capnp'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

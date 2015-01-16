@@ -1,6 +1,7 @@
 .DS_Store
 vendor/bundle
 .*.swp
+.swp
 .*.swo
 Gemfile.lock
 .ruby-version
