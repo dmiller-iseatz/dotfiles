@@ -25,4 +25,4 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [init]
-	templatedir = ~/dotfiles/links/git/
+  #templatedir = ~/dotfiles/links/git/

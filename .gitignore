@@ -6,3 +6,4 @@ Gemfile.lock
 .ruby-version
 Gemfile.local*
 bower_components
+.vim/bundle
