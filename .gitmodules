@@ -16,30 +16,3 @@
 [submodule "vim-ruby"]
 	path = vim-ruby
 	url = ./.vim/bundle/vim-ruby
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
-	url = git@github.com:majutsushi/tagbar.git
-[submodule ".vim/bundle/vim-bundler"]
-	path = .vim/bundle/vim-bundler
-	url = git@github.com:tpope/vim-bundler.git
-[submodule ".vim/bundle/vim-handlebars"]
-	path = .vim/bundle/vim-handlebars
-	url = git@github.com:nono/vim-handlebars.git
-[submodule ".vim/bundle/vim-ruby"]
-	path = .vim/bundle/vim-ruby
-	url = git@github.com:vim-ruby/vim-ruby.git
-[submodule ".vim/bundle/vim-rails"]
-	path = .vim/bundle/vim-rails
-	url = git@github.com:tpope/vim-rails.git
-[submodule ".vim/bundle/vim-git"]
-	path = .vim/bundle/vim-git
-	url = https://github.com/tpope/vim-git.git
-[submodule ".vim/bundle/bufexplorer"]
-	path = .vim/bundle/bufexplorer
-	url = git@github.com:jlanzarotta/bufexplorer.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git

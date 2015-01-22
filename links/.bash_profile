@@ -45,7 +45,3 @@ source ~/git-completion.bash
 # Ruby assistance
 alias be='bundle exec'
 alias bi='bundle install'
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-if [ -f ~/.bashrc ]; then source ~/.bashrc; fi
