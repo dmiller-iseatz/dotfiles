@@ -51,6 +51,12 @@ if [ -f $HOME/git-completion.bash ]; then
   source ~/git-completion.bash
 fi
 
+#ls branch command
+if [ -f $HOME/.git-ls-branch.sh ]; then
+  source ~/.git-ls-branch.sh
+  alias lsb='__git_ls_branch'
+fi
+
 # Ruby assistance
 alias be='bundle exec'
 alias bi='bundle install'

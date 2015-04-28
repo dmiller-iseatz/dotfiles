@@ -7,6 +7,7 @@ function __dm_link_up() {
   ln -sf $HOME/dotfiles/links/.vimrc $HOME/
   ln -sf $HOME/dotfiles/links/.vim $HOME/
   ln -sf $HOME/dotfiles/links/.git-prompt.sh $HOME/
+  ln -sf $HOME/dotfiles/links/.git-ls-branch.sh $HOME/
   ln -sf $HOME/dotfiles/links/git-completion.bash $HOME/
 }
 
