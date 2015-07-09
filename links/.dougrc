@@ -60,3 +60,4 @@ fi
 # Ruby assistance
 alias be='bundle exec'
 alias bi='bundle install'
+alias killbox='kill -9 `pgrep java` `pgrep standalone`'
