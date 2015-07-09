@@ -64,7 +64,7 @@ __git_ls_application () {
     then
       cd $item
       ps1=`__git_ps1`
-      printf "%-30s %15s\n" "$item" "$ps1"
+      printf "%-30s %30s\n" "$item" "$ps1"
       cd ..
     else
       printf "%-30s\n" "$item"
