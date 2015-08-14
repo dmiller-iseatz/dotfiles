@@ -9,6 +9,7 @@ function __dm_link_up() {
   ln -sf $HOME/dotfiles/links/.git-prompt.sh $HOME/
   ln -sf $HOME/dotfiles/links/.git-update-application.sh $HOME/
   ln -sf $HOME/dotfiles/links/git-completion.bash $HOME/
+  ln -sf $HOME/dotfiles/links/.ssh-config-autocomplete.sh $HOME/
 }
 
 __dm_link_up
