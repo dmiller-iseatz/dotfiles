@@ -16,6 +16,9 @@ Plugin 'wincent/Command-T'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'fatih/vim-go'
 Plugin 'cstrahan/vim-capnp'
+Plugin 'mxw/vim-jsx'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'godlygeek/tabular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

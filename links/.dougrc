@@ -57,7 +57,14 @@ if [ -f $HOME/.git-ls-branch.sh ]; then
   alias lsb='__git_ls_branch'
 fi
 
+if [ -f $HOME/.ssh-config-autocomplete.sh ]; then
+  source $HOME/.ssh-config-autocomplete.sh
+  complete -F _ssh ssh
+fi
+
 # Ruby assistance
 alias be='bundle exec'
 alias bi='bundle install'
 alias killbox='kill -9 `pgrep java` `pgrep standalone`'
+alias psql-api='psql -h dmiller-onview-11.c1qhdj3tvtzv.us-east-1.rds.amazonaws.com -U postgres api_mock'
+alias psql-simian_qa='psql -h 54.208.90.157 -U postgres simian_qa'
