@@ -37,6 +37,10 @@ set ruler
 " Set the colorscheme
 colorscheme slate
 
+" Set colorcolumn and color
+set colorcolumn=120
+highlight ColorColumn guibg=Black
+
 " Set tab widths
 set expandtab
 set tabstop=2
