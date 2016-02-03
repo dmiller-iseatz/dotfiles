@@ -39,7 +39,7 @@ colorscheme slate
 
 " Set colorcolumn and color
 set colorcolumn=120
-highlight ColorColumn guibg=Black
+highlight ColorColumn ctermbg=8 guibg=#2f2f2f
 
 " Set tab widths
 set expandtab
