@@ -19,6 +19,7 @@ Plugin 'cstrahan/vim-capnp'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'godlygeek/tabular'
+Plugin 'saltstack/salt-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,6 +85,16 @@ function! DoCleanXML()
   exe "set ft=" . l:origft
 endfunction
 command! CleanXML call DoCleanXML()
+
+function! DoCleanRuby()
+  %s/\([^ ]\)==\([^ ]\)/\1 == \2/g
+  %s/\([^ ]\)=>\([^ ]\)/\1 => \2/g
+  %s/\([^ ]\)=\([^ ]\)/\1 = \2/g
+  %s/  \+$//g
+  " %s/\(\S\)  \+/\1 /g
+  write
+endfunction
+command! CleanRuby call DoCleanRuby()
 
 " Open vim-fugitive Ggrep output in a quickfix window
 autocmd QuickFixCmdPost *grep* cwindow
