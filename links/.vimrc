@@ -96,5 +96,10 @@ function! DoCleanRuby()
 endfunction
 command! CleanRuby call DoCleanRuby()
 
+function! DoEqualize()
+  %s/  \+= / = /g
+endfunction
+command! Equalize call DoEqualize()
+
 " Open vim-fugitive Ggrep output in a quickfix window
 autocmd QuickFixCmdPost *grep* cwindow

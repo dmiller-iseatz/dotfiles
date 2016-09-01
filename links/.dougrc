@@ -69,6 +69,7 @@ fi
 
 # Ruby assistance
 alias be='bundle exec'
+alias jbe='JRUBY_OPTS="--dev" jruby -G'
 alias bi='bundle install'
 alias killbox='kill -9 `pgrep java` `pgrep standalone`'
 alias psql-api='psql -h dmiller-onview-11.c1qhdj3tvtzv.us-east-1.rds.amazonaws.com -U postgres api_mock'
