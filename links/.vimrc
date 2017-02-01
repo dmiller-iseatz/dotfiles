@@ -20,6 +20,8 @@ Plugin 'mxw/vim-jsx'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'godlygeek/tabular'
 Plugin 'saltstack/salt-vim'
+Plugin 'eiginn/netrw'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

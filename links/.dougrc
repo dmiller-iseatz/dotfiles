@@ -3,9 +3,9 @@ if [ -d $HOME/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
-if [ -d $HOME/.nvm ]; then
-  source ~/.nvm/nvm.sh
-fi
+#if [ -d $HOME/.nvm ]; then
+#  source ~/.nvm/nvm.sh
+#fi
 
 if [ -f $HOME/.git-prompt.sh ]; then
   # DEVIN'S PERSONAL AWESOMEPROMPT(tm) with DOUG'S AWESOMEREADIBILITY(tm)
@@ -80,3 +80,10 @@ alias psql-slog_stage='ssh -t rake1 "PGPASSWORD=Ooz8iekohn psql -h slogs.private
 if [ -d $HOME/apache-maven-3.3.9/ ]; then
   export PATH=$HOME/apache-maven-3.3.9/bin/:$PATH
 fi
+if [ -d $HOME/.nodenv-1.0.0/ ]; then
+  export PATH="$HOME/.nodenv-1.0.0/bin:$PATH"
+  eval "$(nodenv init -)"
+fi
+
+#Disable deprication warnings in ruby
+export RUBYOPT='-W0'

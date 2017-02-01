@@ -3,6 +3,7 @@ vendor/bundle
 .*.swp
 .swp
 .*.swo
+.swo
 Gemfile.lock
 Gemfile.local*
 bower_components
@@ -11,4 +12,6 @@ bower_components
 *.raw
 *.log
 *.swn
-
+reports/
+coverage
+.bundle
